@@ -39,7 +39,7 @@ class User {
 
 
     public function display(){
-        $results = mysqli_query($GLOBALS[$con],"SELECT * FROM accounts where email='$this->email'");
+        $results = mysqli_query($GLOBALS[$con],"SELECT * FROM accounts");
         if(count($results) > 0){
                  echo "<table border=\"1\"><tr><th>First Name</th><th>Last Name</th><th>Phone</th><th>Birthday</th><th>Gender</th><th>Email</th><th>Password</th></tr>";
                  foreach ($results as $row) {
